@@ -5,13 +5,13 @@ def main(matrix):
     buckets = 0
     index_matrix = 0
     index_matrix_row = 0
-    for index, mat in enumerate(matrix):
+    for mat in matrix:
         index_row = 0
-        for j in mat:
+        for val in mat:
             if index_matrix_row > index_row:
                 index_row += 1
                 continue
-            buckets += j
+            buckets += val
             if index_row < len(mat):
                 if index_row+1 == len(mat):
                     break
